@@ -1,0 +1,26 @@
+    <div class="ui-layout intro-info" style="background: url(/Content/Images/intro-right-bg.jpg) no-repeat right 28px;">
+        <h2>Introduce</h2>
+        <p>
+            Shanghai Star International (SSI) is a company specializing in the following products
+            of the Spacer bar for Insulating Glass and also<br>
+            trades in Sealant and Molecular Sieve for Insulating Glass.</p>
+        <p>
+            <b>Aluminium Spacer Bars and Connectors</b> - This covers a range of 5.5mm to 24mm Aluminium
+            Spacer Bars for Standard as well as<br>
+            Bendable applications.</p>
+        <p>
+            <b>Plastic Spacer Bars and Connectors</b> - This covers a range of 5.5mm to 24mm Warm Spacer
+            bar for Insulating Glass.</p>
+        <p>
+            <b>Molecular Sieves (Dessicants)</b> - Molecular Sieves are used for Insulated Glass Units
+            are available in 3 different bead sizes.</p>
+        <p>
+            Except the above products, We still have the polysulphide sealant, butyl sealant,
+            silicone sealant for Insulating Glass.</p>
+        <ul class="fn-clear">
+            <li class="fn-left" style="margin-left:0;"><img src="/Content/Images/intro-product-1.jpg" alt=""></li>
+            <li class="fn-left"><img src="/Content/Images/intro-product-2.jpg" alt=""></li>
+            <li class="fn-left"><img src="/Content/Images/intro-product-3.jpg" alt=""></li>
+            <li class="fn-left"><img src="/Content/Images/intro-product-4.jpg" alt=""></li>
+        </ul>
+    </div>

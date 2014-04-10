@@ -1,0 +1,16 @@
+﻿虚拟主机
+
+主机名称:ssiglass
+上传地址:58.64.130.11
+上传帐号:ssiglass
+上传密码:ssiglass_111222 
+购买期限:1 年
+
+MSSQL Server
+
+产品型号:
+香港.net主机(送mssql50) ( agt_hknet_mssql50 )
+数据库地址:58.64.186.52
+数据库名称:sq_ssiglass
+数据库密码:mssqlssi76
+购买期限:1 年

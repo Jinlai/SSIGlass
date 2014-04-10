@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53B50C29-7431-4576-A676-E8C03016556D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSIGlass.Core</RootNamespace>
+    <AssemblyName>SSIGlass.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\ExternalLibs\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.IBatisNetIntegration">
+      <HintPath>..\ExternalLibs\Castle\Castle.Facilities.IBatisNetIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Transaction">
+      <HintPath>..\ExternalLibs\Castle\Castle.Services.Transaction.dll</HintPath>
+    </Reference>
+    <Reference Include="EgaplayFx.Core">
+      <HintPath>..\ExternalLibs\EgaplayFx\EgaplayFx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EgaplayFx.FileStorages.Services">
+      <HintPath>..\ExternalLibs\EgaplayFx\FileStorages\EgaplayFx.FileStorages.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\ExternalLibs\IBatis.DataMapper.1.6.2.bin\Ibatis.DataMapper.1.6.2.bin\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\ExternalLibs\IBatis.DataMapper.1.6.2.bin\Ibatis.DataMapper.1.6.2.bin\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\ExternalLibs\Microsoft\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\DefaultFileUploadProvider.cs" />
+    <Compile Include="Content\DefaultGraphicUploadProvider.cs" />
+    <Compile Include="Content\DefaultGraphicViewProvider.cs" />
+    <Compile Include="Content\FileUploadException.cs" />
+    <Compile Include="Content\IFileUploadProvider.cs" />
+    <Compile Include="Content\IGraphicUploadProvider.cs" />
+    <Compile Include="Content\IGraphicViewProvider.cs" />
+    <Compile Include="DataAccess\IDao.cs" />
+    <Compile Include="DataAccess\IArticleDao.cs" />
+    <Compile Include="DataAccess\IManagerDao.cs" />
+    <Compile Include="DataAccess\IProductDao.cs" />
+    <Compile Include="DataAccess\ManagerDao.cs" />
+    <Compile Include="DataAccess\MyBatisNetDao.cs" />
+    <Compile Include="DataAccess\ArticleDao.cs" />
+    <Compile Include="DataAccess\ProductDao.cs" />
+    <Compile Include="DataAccess\IArticleRuDao.cs" />
+    <Compile Include="DataAccess\ArticleRuDao.cs" />
+    <Compile Include="DataAccess\IProductRuDao.cs" />
+    <Compile Include="DataAccess\ProductRuDao.cs" />
+    <Compile Include="Logging\ILoggerManager.cs" />
+    <Compile Include="Logging\LoggerManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ApplicationService.cs" />
+    <Compile Include="Services\ArticleService.cs" />
+    <Compile Include="Services\CustomContentService.cs" />
+    <Compile Include="Services\FileUploadService.cs" />
+    <Compile Include="Services\GraphicViewService.cs" />
+    <Compile Include="Services\ManagerService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\ArticleRuService.cs" />
+    <Compile Include="Services\ProductRuService.cs" />
+    <Compile Include="Trans.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSIGlass.Contract\SSIGlass.Contract.csproj">
+      <Project>{D5E5B4F5-CE8F-4C6B-8D59-D89625273378}</Project>
+      <Name>SSIGlass.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccess\Maps\Article.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccess\Maps\Product.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccess\Maps\ArticleRu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccess\Maps\ProductRu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAccess\Maps\Manager.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

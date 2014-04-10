@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F2419DF-38EB-4634-9DB2-FB414959BDF2}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSIGlass.Web</RootNamespace>
+    <AssemblyName>SSIGlass.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\ExternalLibs\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.AutoTx">
+      <HintPath>..\ExternalLibs\Castle\Castle.Facilities.AutoTx.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.IBatisNetIntegration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Castle\Castle.Facilities.IBatisNetIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging">
+      <HintPath>..\ExternalLibs\Castle\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration">
+      <HintPath>..\ExternalLibs\Castle\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Transaction, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Castle\Castle.Services.Transaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter">
+      <HintPath>..\ExternalLibs\Microsoft\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="EgaplayFx.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\EgaplayFx\EgaplayFx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EgaplayFx.Web">
+      <HintPath>..\ExternalLibs\EgaplayFx\EgaplayFx.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EgaplayFx.Web.Mvc">
+      <HintPath>..\ExternalLibs\EgaplayFx\EgaplayFx.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net">
+      <HintPath>..\ExternalLibs\ext.net.community.1.3\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=1.3.0.39155, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ext.net.community.1.3\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\ExternalLibs\FluentValidation\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\ExternalLibs\FluentValidation\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Microsoft\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\MVCContrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Castle">
+      <HintPath>..\ExternalLibs\MVCContrib\MvcContrib.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ext.net.community.1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ASP.NET MVC 2\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomContentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FileUploadManageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleRuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductRuController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\CustomContentViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\DefaultViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PagingViewModel.cs" />
+    <Compile Include="Areas\Russian\Controllers\AboutController.cs" />
+    <Compile Include="Areas\Russian\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Russian\Controllers\NewsController.cs" />
+    <Compile Include="Areas\Russian\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Russian\RussianAreaRegistration.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AccordionMenuItemProvider.cs" />
+    <Compile Include="Helpers\CustomContentHelper.cs" />
+    <Compile Include="Helpers\CustomContentMenuItemProvider.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Initialization\ApplicationBootstrapper.cs" />
+    <Compile Include="Initialization\Installers\ValidationInstaller.cs" />
+    <Compile Include="Initialization\SsiGlassMvcApplication.cs" />
+    <Compile Include="Initialization\Installers\ControllersInstaller.cs" />
+    <Compile Include="Initialization\Installers\DaosInstaller.cs" />
+    <Compile Include="Initialization\Installers\DefaultInstaller.cs" />
+    <Compile Include="Initialization\Installers\ServiceInstaller.cs" />
+    <Compile Include="Initialization\ServiceLocatorValidatorFactory.cs" />
+    <Compile Include="Initialization\WindsorActionInvoker.cs" />
+    <Compile Include="Initialization\WindsorExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ProductListViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Article\Add.aspx" />
+    <Content Include="Areas\Admin\Views\Article\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\Article\List.aspx" />
+    <Content Include="Areas\Admin\Views\CustomContent\Default.aspx" />
+    <Content Include="Areas\Admin\Views\CustomContent\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\FileUploadManage\AjaxUploadPic.aspx" />
+    <Content Include="Areas\Admin\Views\FileUploadManage\Default.aspx" />
+    <Content Include="Areas\Admin\Views\Home\Default.aspx" />
+    <Content Include="Areas\Admin\Views\Product\Add.aspx" />
+    <Content Include="Areas\Admin\Views\Product\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\Product\List.aspx" />
+    <Content Include="Areas\Admin\Views\ArticleRu\Add.aspx" />
+    <Content Include="Areas\Admin\Views\ArticleRu\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\ArticleRu\List.aspx" />
+    <Content Include="Areas\Admin\Views\ProductRu\Add.aspx" />
+    <Content Include="Areas\Admin\Views\ProductRu\Edit.aspx" />
+    <Content Include="Areas\Admin\Views\ProductRu\List.aspx" />
+    <Content Include="Areas\Russian\Views\About\Contact.aspx" />
+    <Content Include="Areas\Russian\Views\About\Distributor.aspx" />
+    <Content Include="Areas\Russian\Views\About\Intro.aspx" />
+    <Content Include="Areas\Russian\Views\Home\Default.aspx" />
+    <Content Include="Areas\Russian\Views\News\Detail.aspx" />
+    <Content Include="Areas\Russian\Views\News\List.aspx" />
+    <Content Include="Areas\Russian\Views\Product\Detail.aspx" />
+    <Content Include="Areas\Russian\Views\Product\List.aspx" />
+    <Content Include="Config\Admin\AccordionMenus.xml" />
+    <Content Include="Config\Admin\CustomContentMenuItems.xml" />
+    <Content Include="Content\Images\about-bg-ru.jpg" />
+    <Content Include="Content\Images\about-bg.jpg" />
+    <Content Include="Content\Images\back-news-list.jpg" />
+    <Content Include="Content\Images\banner.jpg" />
+    <Content Include="Content\Images\english-icon.jpg" />
+    <Content Include="Content\Images\footer-bg.jpg" />
+    <Content Include="Content\Images\header-bg.jpg" />
+    <Content Include="Content\Images\home-about-bg-ru.jpg" />
+    <Content Include="Content\Images\home-about-bg.jpg" />
+    <Content Include="Content\Images\home-news-list-bottom.jpg" />
+    <Content Include="Content\Images\home-news-title-ru.jpg" />
+    <Content Include="Content\Images\home-news-title.jpg" />
+    <Content Include="Content\Images\home-series-arrow.jpg" />
+    <Content Include="Content\Images\intro-product-1.jpg" />
+    <Content Include="Content\Images\intro-product-2.jpg" />
+    <Content Include="Content\Images\intro-product-3.jpg" />
+    <Content Include="Content\Images\intro-product-4.jpg" />
+    <Content Include="Content\Images\intro-right-bg.jpg" />
+    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\news-list-img.jpg" />
+    <Content Include="Content\Images\product-bg.jpg" />
+    <Content Include="Content\Images\product-left-bg-ru.jpg" />
+    <Content Include="Content\Images\product-left-bg.jpg" />
+    <Content Include="Content\Images\product-list-bg.jpg" />
+    <Content Include="Content\Images\product-more.jpg" />
+    <Content Include="Content\Images\product-name-bg.jpg" />
+    <Content Include="Content\Images\russian-icon.jpg" />
+    <Content Include="Content\Images\series-1.jpg" />
+    <Content Include="Content\Images\series-2.jpg" />
+    <Content Include="Content\Images\series-3.jpg" />
+    <Content Include="Content\Images\series-4.jpg" />
+    <Content Include="Content\Styles\Admin\Comm.css" />
+    <Content Include="Content\Styles\Admin\Ext-patch.css" />
+    <Content Include="Content\Styles\Base.css" />
+    <Content Include="Content\Styles\Comm.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\zclip\jquery.zclip.js" />
+    <Content Include="Scripts\zclip\jquery.zclip.min.js" />
+    <Content Include="Scripts\zclip\ZeroClipboard.swf" />
+    <Content Include="Views\About\Contact.aspx" />
+    <Content Include="Views\About\Distributor.aspx" />
+    <Content Include="Views\About\Intro.aspx" />
+    <Content Include="Views\Component\Footer.ascx" />
+    <Content Include="Views\Component\Header.ascx" />
+    <Content Include="Views\Component\Banner.ascx" />
+    <Content Include="Views\Home\Default.aspx" />
+    <Content Include="Views\News\Detail.aspx" />
+    <Content Include="Views\News\List.aspx" />
+    <Content Include="Views\Product\Detail.aspx" />
+    <Content Include="Views\Product\List.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jQuery\jquery-1.4.1.js" />
+    <Content Include="Scripts\jQuery\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jQuery\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="服务器信息.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SSIGlass.Contract\SSIGlass.Contract.csproj">
+      <Project>{D5E5B4F5-CE8F-4C6B-8D59-D89625273378}</Project>
+      <Name>SSIGlass.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSIGlass.Core\SSIGlass.Core.csproj">
+      <Project>{53B50C29-7431-4576-A676-E8C03016556D}</Project>
+      <Name>SSIGlass.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSIGlass.Web.Infrastructure\SSIGlass.Web.Infrastructure.csproj">
+      <Project>{98057FC2-1395-4F16-9C4C-511E8AEB76F2}</Project>
+      <Name>SSIGlass.Web.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\AppSettings.config" />
+    <Content Include="Config\log4net.config" />
+    <Content Include="Config\Windsor.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Providers.config" />
+    <Content Include="SqlMap.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Shared\ExtNetBase.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\CustomContents\Banner_俄文" />
+    <None Include="App_Data\CustomContents\Banner_英文" />
+    <None Include="App_Data\CustomContents\Footer_俄文" />
+    <None Include="App_Data\CustomContents\Footer_英文" />
+    <None Include="App_Data\CustomContents\Header_俄文" />
+    <None Include="App_Data\CustomContents\Header_英文" />
+    <None Include="App_Data\CustomContents\介绍页_俄文" />
+    <None Include="App_Data\CustomContents\介绍页_英文" />
+    <None Include="App_Data\CustomContents\经销商页_俄文" />
+    <None Include="App_Data\CustomContents\经销商页_英文" />
+    <None Include="App_Data\CustomContents\联系页_俄文" />
+    <None Include="App_Data\CustomContents\联系页_英文" />
+    <None Include="App_Data\CustomContents\首页_俄文" />
+    <None Include="App_Data\CustomContents\首页_英文" />
+    <Content Include="Areas\Russian\Views\Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2054</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

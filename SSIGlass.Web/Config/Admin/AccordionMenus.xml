@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menus>
+    <menu title="公共区域内容管理">
+        <submenu title="网站头部" url="/Admin/CustomContent/Default.aspx?groupName=Header" icon="14"/>
+        <submenu title="Banner（横幅）" url="/Admin/CustomContent/Default.aspx?groupName=Banner" icon="14"/>
+        <submenu title="网站底部" url="/Admin/CustomContent/Default.aspx?groupName=Footer" icon="14"/>
+    </menu>
+    <menu title="网页内容管理">
+        <submenu title="首页" url="/Admin/CustomContent/Default.aspx?groupName=首页" icon="14"/>
+        <submenu title="介绍页" url="/Admin/CustomContent/Default.aspx?groupName=介绍页" icon="14"/>
+        <submenu title="经销商页" url="/Admin/CustomContent/Default.aspx?groupName=经销商页" icon="14"/>
+        <submenu title="联系页" url="/Admin/CustomContent/Default.aspx?groupName=联系页" icon="14"/>
+    </menu>
+    <menu title="新闻信息管理">
+        <submenu title="新闻列表" url="/Admin/Article/List.aspx" icon="53"></submenu>
+        <submenu title="新闻列表（俄语）" url="/Admin/ArticleRu/List.aspx" icon="53"></submenu>
+    </menu>
+    <menu title="产品信息管理">
+        <submenu title="产品信息列表" url="/Admin/Product/List.aspx" icon="53"></submenu>
+        <submenu title="产品信息列表（俄语）" url="/Admin/ProductRu/List.aspx" icon="53"></submenu>
+    </menu>
+    <menu title="图片上传管理">
+        <submenu title="图片上传" url="/Admin/FileUploadManage/Default.aspx" icon="1271"></submenu>
+    </menu>
+</menus>

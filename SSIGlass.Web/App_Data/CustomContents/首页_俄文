@@ -1,0 +1,24 @@
+        <div class="ui-layout home-product-series">
+            <ul class="fn-clear">
+                <li class="fn-left">
+                    <a href="/Russian/Product/List.aspx?categoryId=1001" class="img"><img src="/Content/Images/series-1.jpg" alt=""></a>
+                    <h3>§¡§Ý§ð§Þ§Ú§ß§Ú§Ö§Ó§Ñ§ñ §Õ§Ú§ã§ä§Ñ§ß§è§Ú§à§ß§ß§Ñ§ñ §â§Ñ§Þ§Ü§Ñ</h3>
+                    <h4><a href="/Russian/Product/List.aspx?categoryId=1001" target="_blank">§±§à§Õ§â§à§Ò§ß§Ö§Ö</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:17px;">
+                    <a href="/Russian/Product/List.aspx?categoryId=1002" class="img"><img src="/Content/Images/series-2.jpg" alt=""></a>
+                    <h3>§´§Ö§á§Ý§í§Û §Ò§Ñ§â</h3>
+                    <h4><a href="/Russian/Product/List.aspx?categoryId=1002" target="_blank">§±§à§Õ§â§à§Ò§ß§Ö§Ö</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:17px;">
+                    <a href="/Russian/Product/List.aspx?categoryId=1003" class="img"><img src="/Content/Images/series-3.jpg" alt=""></a>
+                    <h3>§Þ§à§Ý§Ö§Ü§å§Ý§ñ§â§ß§à§Ö §ã§Ú§ä§à</h3>
+                    <h4><a href="/Russian/Product/List.aspx?categoryId=1003" target="_blank">§±§à§Õ§â§à§Ò§ß§Ö§Ö</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:18px;">
+                    <a href="/Russian/Product/List.aspx?categoryId=1004" class="img"><img src="/Content/Images/series-4.jpg" alt=""></a>
+                    <h3>§³§Ö§Ñ§Ý§Ñ§ß§ä  IG</h3>
+                    <h4><a href="/Russian/Product/List.aspx?categoryId=1004" target="_blank">§±§à§Õ§â§à§Ò§ß§Ö§Ö</a></h4>
+                </li>
+            </ul>
+        </div>

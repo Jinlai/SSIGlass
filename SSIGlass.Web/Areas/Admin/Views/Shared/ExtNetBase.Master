@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ExtNetBaseMasterPage</title>
+    <asp:ContentPlaceHolder ID="Header" runat="server" />
+    <link href="/Content/Styles/Admin/Ext-patch.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <script type="text/javascript">
+        var ExtNet = {};
+        ExtNet.win = function() {
+            //配置窗口大小
+            var winConfigs = [], x = 0, y = 0;
+            winConfigs.push({ url: "/Admin/Article/Add.aspx", width:645, height:525, modal: true, maximizable: false, collapsible: false });
+            winConfigs.push({ url: "/Admin/Article/Edit.aspx", width: 645, height: 525, modal: true, maximizable: false, collapsible: false });
+
+            winConfigs.push({ url: "/Admin/Product/Add.aspx", width: 645, height: 480, modal: true, maximizable: false, collapsible: false });
+            winConfigs.push({ url: "/Admin/Product/Edit.aspx", width: 645, height: 480, modal: true, maximizable: false, collapsible: false });
+
+            winConfigs.push({ url: "/Admin/ArticleRu/Add.aspx", width: 645, height: 525, modal: true, maximizable: false, collapsible: false });
+            winConfigs.push({ url: "/Admin/ArticleRu/Edit.aspx", width: 645, height: 525, modal: true, maximizable: false, collapsible: false });
+
+            winConfigs.push({ url: "/Admin/ProductRu/Add.aspx", width: 645, height: 480, modal: true, maximizable: false, collapsible: false });
+            winConfigs.push({ url: "/Admin/ProductRu/Edit.aspx", width: 645, height: 480, modal: true, maximizable: false, collapsible: false });
+            //弹出窗口
+            this.show = function(config) {
+                var winId = "win" + config.id;
+                var win = Ext.getCmp(winId);
+                var winConfig = this.getWinConfig(config.url.split('?')[0]);
+                if (!win) {
+                    x += 30; y += 30;
+                    win = new Ext.Window({
+                            pageX: 0, pageY: 0, x: x, y: y,
+                            width: winConfig.width,
+                            height: winConfig.height,
+                            modal: winConfig.modal == undefined ? false : true,
+                            maximizable: winConfig.maximizable == undefined ? true : false,
+                            collapsible: winConfig.collapsible == undefined ? true : false,
+                            resizable: winConfig.resizable == undefined ? true : false,
+                            draggable: winConfig.draggable == undefined ? true : false,
+                            border: false,
+                            id: winId,
+                            title: config.title,
+                            iconCls: config.icon || "icon-applicationdouble",
+                            autoLoad: {
+                                showMask: true,
+                                url: config.url,
+                                mode: "iframe",
+                                noCache: true,
+                                maskMsg: "正在加载 " + config.title + "...",
+                                scripts: true
+                            },
+                            listeners: {
+                                "close": function() { win.hide(); },
+                                "minimize": function() { win.hide(); }
+                            }
+                        });
+                }
+                win.show();
+                if (winConfig.modal)
+                    win.center();
+            };
+            //关闭窗口
+            this.close = function(winId) {
+                var win = Ext.getCmp("win" + winId);
+                if (win)
+                    win.close();
+            }; ;
+
+            //根据页面url 查找窗口的大小
+            this.getWinConfig = function(url) {
+                for (var i = 0; i < winConfigs.length; i++) {
+                    if (winConfigs[i].url == url)
+                        return winConfigs[i];
+                }
+                return { width: 500, height: 500 };
+            };
+        };
+    </script>
+    <asp:ContentPlaceHolder ID="Footer" runat="server" />
+</body>
+</html>

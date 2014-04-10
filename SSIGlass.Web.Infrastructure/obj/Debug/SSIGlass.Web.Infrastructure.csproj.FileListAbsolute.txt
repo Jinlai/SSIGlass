@@ -1,0 +1,7 @@
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\bin\Debug\SSIGlass.Web.Infrastructure.dll
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\bin\Debug\SSIGlass.Web.Infrastructure.pdb
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\bin\Debug\MvcContrib.dll
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\bin\Debug\MvcContrib.xml
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\obj\Debug\SSIGlass.Web.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\obj\Debug\SSIGlass.Web.Infrastructure.dll
+E:\Projects\SSIGlass\trunk\SSIGlass.Web.Infrastructure\obj\Debug\SSIGlass.Web.Infrastructure.pdb

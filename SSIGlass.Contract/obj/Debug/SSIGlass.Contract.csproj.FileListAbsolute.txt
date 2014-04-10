@@ -1,0 +1,4 @@
+E:\Projects\SSIGlass\trunk\SSIGlass.Contract\bin\Debug\SSIGlass.Contract.dll
+E:\Projects\SSIGlass\trunk\SSIGlass.Contract\bin\Debug\SSIGlass.Contract.pdb
+E:\Projects\SSIGlass\trunk\SSIGlass.Contract\obj\Debug\SSIGlass.Contract.dll
+E:\Projects\SSIGlass\trunk\SSIGlass.Contract\obj\Debug\SSIGlass.Contract.pdb

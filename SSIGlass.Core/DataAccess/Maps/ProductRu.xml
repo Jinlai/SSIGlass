@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="ProductRu" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <insert id="InsertProductRu" parameterClass="ProductRu">
+            INSERT INTO ProductRu(CategoryId,ProductName,PhotoKey,[Desc],UpdateTimestamp) VALUES(#CategoryId#,#ProductName#,#PhotoKey#,#Desc#,#UpdateTimestamp#);
+            <selectKey property="ProductId" type="post" resultClass="int">
+                SELECT @@identity;
+            </selectKey>
+        </insert>
+        <delete id="DeleteProductRuByProductId" parameterClass="int">
+            DELETE FROM ProductRu WHERE ProductId = #value#;
+        </delete>
+        <update id="UpdateProductRuByProductId" parameterClass="ProductRu">
+            UPDATE ProductRu
+            SET CategoryId=#CategoryId#,ProductName=#ProductName#,PhotoKey=#PhotoKey#,[Desc]=#Desc#,UpdateTimestamp=#UpdateTimestamp#
+            WHERE ProductId = #ProductId#;
+        </update>
+        <select id="GetProductRuByProductId" parameterClass="int" resultClass="ProductRu">
+            SELECT * FROM ProductRu WHERE ProductId = #value#;
+        </select>
+        <select id="GetProductRuByCategoryId" parameterClass="int" resultClass="ProductRu">
+            SELECT * FROM ProductRu WHERE CategoryId = #value#;
+        </select>
+        <select id="GetAllProductRuList" parameterClass="int" resultClass="ProductRu">
+            SELECT * FROM ProductRu ORDER BY UpdateTimestamp DESC;
+        </select>
+    </statements>
+</sqlMap>

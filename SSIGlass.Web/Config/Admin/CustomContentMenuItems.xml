@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<groups>
+  <group name="Header">英文,俄文</group>
+  <group name="Banner">英文,俄文</group>
+  <group name="Footer">英文,俄文</group>
+  <group name="首页">英文,俄文</group>
+  <group name="介绍页">英文,俄文</group>
+  <group name="经销商页">英文,俄文</group>
+  <group name="联系页">英文,俄文</group>
+</groups>

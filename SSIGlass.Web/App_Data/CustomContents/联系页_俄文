@@ -1,0 +1,12 @@
+    <div class="ui-layout" style="padding-bottom:60px;">
+        <h2>§Ü§à§ß§ä§Ñ§Ü§ä </h2>
+        <div class="contact-info" style="background-image:url(/Content/Images/about-bg-ru.jpg);">
+            <ul>
+                <li style="font-weight:700;font-size:16px; color:#257CB8;">Shanghai Star International (SSI)</li>
+                <li>Address: NO. 22 CaoXin Road, JiaDing &nbsp;District,Shanghai, China</li>
+                <li>Tel:  86 21 49698929</li>
+                <li>Tel:  86 21 59549553 </li>
+                <li>Email: <a href="mailto:info@ssiglass.com">info@ssiglass.com</a></li>
+            </ul>
+        </div>
+    </div>

@@ -1,0 +1,24 @@
+        <div class="ui-layout home-product-series">
+            <ul class="fn-clear">
+                <li class="fn-left">
+                    <a href="/Product/List.aspx?categoryId=1001" class="img"><img src="/Content/Images/series-1.jpg" alt=""></a>
+                    <h3>Aluminium Spacer Bar</h3>
+                    <h4><a href="/Product/List.aspx?categoryId=1001" target="_blank">Read more</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:17px;">
+                    <a href="/Product/List.aspx?categoryId=1002" class="img"><img src="/Content/Images/series-2.jpg" alt=""></a>
+                    <h3>Warm Spacer Bar</h3>
+                    <h4><a href="/Product/List.aspx?categoryId=1002" target="_blank">Read more</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:17px;">
+                    <a href="/Product/List.aspx?categoryId=1003" class="img"><img src="/Content/Images/series-3.jpg" alt=""></a>
+                    <h3>Molecular Sieve</h3>
+                    <h4><a href="/Product/List.aspx?categoryId=1003" target="_blank">Read more</a></h4>
+                </li>
+                <li class="fn-left" style="margin-left:18px;">
+                    <a href="/Product/List.aspx?categoryId=1004" class="img"><img src="/Content/Images/series-4.jpg" alt=""></a>
+                    <h3>Sealant for IG</h3>
+                    <h4><a href="/Product/List.aspx?categoryId=1004" target="_blank">Read more</a></h4>
+                </li>
+            </ul>
+        </div>
