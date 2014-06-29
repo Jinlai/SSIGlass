@@ -2,24 +2,24 @@
 <sqlMap namespace="Article" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <statements>
         <insert id="InsertArticle" parameterClass="Article">
-            INSERT INTO Article(Subject,PhotoKey,Summary,[Content],UpdateTimestamp) VALUES(#Subject#,#PhotoKey#,#Summary#,#Content#,#UpdateTimestamp#);
-            <selectKey property="ArticleId" type="post" resultClass="int">
+          INSERT INTO [sq_ssiglass].[Article](Subject,PhotoKey,Summary,[Content],UpdateTimestamp) VALUES(#Subject#,#PhotoKey#,#Summary#,#Content#,#UpdateTimestamp#);
+          <selectKey property="ArticleId" type="post" resultClass="int">
                 SELECT @@identity;
             </selectKey>
         </insert>
         <delete id="DeleteArticleByArticleId" parameterClass="int">
-            DELETE FROM Article WHERE ArticleId = #value#;
+          DELETE FROM [sq_ssiglass].[Article] WHERE ArticleId = #value#;
         </delete>
         <update id="UpdateArticleByArticleId" parameterClass="Article">
-            UPDATE Article
-            SET Subject=#Subject#,PhotoKey=#PhotoKey#,Summary=#Summary#,[Content]=#Content#,UpdateTimestamp=#UpdateTimestamp#
-            WHERE ArticleId = #ArticleId#;
+          UPDATE [sq_ssiglass].[Article]
+          SET Subject=#Subject#,PhotoKey=#PhotoKey#,Summary=#Summary#,[Content]=#Content#,UpdateTimestamp=#UpdateTimestamp#
+          WHERE ArticleId = #ArticleId#;
         </update>
         <select id="GetArticleByArticleId" parameterClass="int" resultClass="Article">
-            SELECT * FROM Article WHERE ArticleId = #value#;
+          SELECT * FROM [sq_ssiglass].[Article] WHERE ArticleId = #value#;
         </select>
         <select id="GetAllArticleList" parameterClass="int" resultClass="Article">
-            SELECT * FROM Article ORDER BY UpdateTimestamp DESC;
+          SELECT * FROM [sq_ssiglass].[Article] ORDER BY UpdateTimestamp DESC;
         </select>
     </statements>
 </sqlMap>

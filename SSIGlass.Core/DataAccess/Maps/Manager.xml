@@ -2,7 +2,7 @@
 <sqlMap namespace="Manager" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <statements>
         <select id="GetManagerByUserName" parameterClass="string" resultClass="Manager">
-            SELECT * FROM [Manager] WHERE [UserName] = #value#;
+          SELECT * FROM [sq_ssiglass].[Manager] WHERE [UserName] = #value#;
         </select>
     </statements>
 </sqlMap>

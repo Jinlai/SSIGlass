@@ -2,24 +2,24 @@
 <sqlMap namespace="ArticleRu" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <statements>
         <insert id="InsertArticleRu" parameterClass="ArticleRu">
-            INSERT INTO ArticleRu(Subject,PhotoKey,Summary,[Content],UpdateTimestamp) VALUES(#Subject#,#PhotoKey#,#Summary#,#Content#,#UpdateTimestamp#);
-            <selectKey property="ArticleId" type="post" resultClass="int">
+          INSERT INTO [sq_ssiglass].[ArticleRu](Subject,PhotoKey,Summary,[Content],UpdateTimestamp) VALUES(#Subject#,#PhotoKey#,#Summary#,#Content#,#UpdateTimestamp#);
+          <selectKey property="ArticleId" type="post" resultClass="int">
                 SELECT @@identity;
             </selectKey>
         </insert>
         <delete id="DeleteArticleRuByArticleId" parameterClass="int">
-            DELETE FROM ArticleRu WHERE ArticleId = #value#;
+          DELETE FROM [sq_ssiglass].[ArticleRu] WHERE ArticleId = #value#;
         </delete>
         <update id="UpdateArticleRuByArticleId" parameterClass="ArticleRu">
-            UPDATE ArticleRu
-            SET Subject=#Subject#,PhotoKey=#PhotoKey#,Summary=#Summary#,[Content]=#Content#,UpdateTimestamp=#UpdateTimestamp#
-            WHERE ArticleId = #ArticleId#;
+          UPDATE [sq_ssiglass].[ArticleRu]
+          SET Subject=#Subject#,PhotoKey=#PhotoKey#,Summary=#Summary#,[Content]=#Content#,UpdateTimestamp=#UpdateTimestamp#
+          WHERE ArticleId = #ArticleId#;
         </update>
         <select id="GetArticleRuByArticleId" parameterClass="int" resultClass="ArticleRu">
-            SELECT * FROM ArticleRu WHERE ArticleId = #value#;
+          SELECT * FROM [sq_ssiglass].[ArticleRu] WHERE ArticleId = #value#;
         </select>
         <select id="GetAllArticleRuList" parameterClass="int" resultClass="ArticleRu">
-            SELECT * FROM ArticleRu ORDER BY UpdateTimestamp DESC;
+          SELECT * FROM [sq_ssiglass].[ArticleRu] ORDER BY UpdateTimestamp DESC;
         </select>
     </statements>
 </sqlMap>
